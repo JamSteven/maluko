@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shirt-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.shirt-thumbnail {
+  width: 50px;
+  opacity: 0.5;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.shirt-thumbnail.active {
+  opacity: 1;
+}
+
+.shirt-main {
+  width: 300px;
+}
+
+.logo {
+  position: absolute;
+  cursor: grab;
+}
+
+.logo.dragging {
+  cursor: grabbing;
+}
+
+.toolbox {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.range-input label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.thumbnail-scroll {
+  display: flex;
+  overflow: scroll;
+  width: 350px;
+  gap: 10px;
+}
+
+.file-input {
+  margin: 10px 0;
+}

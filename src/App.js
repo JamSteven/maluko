@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import "./App.css"
+import TShirtDisplay from "./components/TShirtDisplay"
+import CollectionPage from "./components/CollectionPage"
+import Navbar from "./components/Navbar"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+import HomePage from "./components/HomePage"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Navbar />
+        <header className="App-header"></header>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/personalisation" element={<TShirtDisplay />} />
+          <Route path="/collection" element={<CollectionPage />} />
+          {/* Vous pouvez ajouter d'autres routes ici selon vos besoins */}
+        </Routes>
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App
